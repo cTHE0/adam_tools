@@ -15,5 +15,8 @@ void print_hello(){
 	printf(" / ___ \\ (_| | (_| | | | | | | \\__ \\   | | (_) | (_) | \\__ \\\n");
 	printf("/_/   \\_\\__,_|\\__,_|_| |_| |_| |___/   |_|\\___/ \\___/|_|___/\n");
 	printf("\n \n");
-	printf("Welcome to Adam_Tools! What would you like to do?");
+	printf("Welcome to Adam_Tools! What would you like to do?\n");
+	printf("adam_tools sha256 my_file             --> hash my_file with SHA256 algo\n ");
+	printf("adam_tools leon_the_god               --> glory to Leon\n");
+	printf("adam_tools discuss public_key message --> send message to public_key\n"); 
 }

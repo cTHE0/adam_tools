@@ -1,0 +1,7 @@
+Package: adam-tools
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Ton Nom <ton.email@example.com>
+Description: Adam Tools - une collection d’outils système personnalisés.

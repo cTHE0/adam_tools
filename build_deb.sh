@@ -19,7 +19,7 @@ mkdir -p "$BIN_DIR" "$CONTROL_DIR"
 
 # Compilation
 echo "[+] Compilation de $BINARY_NAME.c"
-gcc -o "$BINARY_NAME" "$BINARY_NAME.c" || { echo "Erreur de compilation"; exit 1; }
+make || { echo "Erreur de compilation"; exit 1; }
 
 # Copie du binaire
 cp "$BINARY_NAME" "$BIN_DIR/"

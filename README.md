@@ -1,5 +1,6 @@
-                                                                       
-
+==========================================                                                                     
+ADAM'S TOOLS
+==========================================
 Adam Tools est une collection d’outils système personnalisés pour Linux, développée en C.
 
 📦 Installation
@@ -40,15 +41,6 @@ Afficher les 16 premiers octets d’un fichier en binaire :
 -------------------
 
 Adam Tools utilise le répertoire `~/.adam_tools/` pour enregistrer ses données locales.
-                                                                      ／＞　 フ
-                                                                     | 　_　_|
-   _       _                 _       _____           _             ／` ミ＿xノ 
-   / \\   __| | __ _ _ __ ___ ( )___  |_   _|__   ___ | |___       /　　　　 |
-  / _ \\ / _` |/ _` | '_ ` _ \\|// __|   | |/ _ \\ / _ \\| / __|   ヽ　　 ﾉ
- / ___ \\ (_| | (_| | | | | | | \\__ \\   | | (_) | (_) | \\__ \\ 　　|　|　|
-/_/   \\_\\__,_|\\__,_|_| |_| |_| |___/   |_|\\___/ \\___/|_|___/ ／￣|　　 |　|　|
-                                                                 (￣ヽ＿_ヽ_)__)
-                                                                    ＼二)
 Ce dossier est créé automatiquement si nécessaire.
 
 

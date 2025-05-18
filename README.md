@@ -1,4 +1,12 @@
-Adam Tools
+                                                                       ／＞　 フ
+                                                                     | 　_　_|
+    _       _                 _       _____           _             ／` ミ＿xノ 
+   / \\   __| | __ _ _ __ ___ ( )___  |_   _|__   ___ | |___       /　　　　 |
+  / _ \\ / _` |/ _` | '_ ` _ \\|// __|   | |/ _ \\ / _ \\| / __|   ヽ　　 ﾉ
+ / ___ \\ (_| | (_| | | | | | | \\__ \\   | | (_) | (_) | \\__ \\ 　　|　|　|
+/_/   \\_\\__,_|\\__,_|_| |_| |_| |___/   |_|\\___/ \\___/|_|___/ ／￣|　　 |　|　|
+                                                                 (￣ヽ＿_ヽ_)__)
+                                                                    ＼二)
 ===========
 
 Adam Tools est une collection d’outils système personnalisés pour Linux, développée en C.
@@ -10,15 +18,13 @@ Adam Tools est une collection d’outils système personnalisés pour Linux, dé
 
 Depuis la dernière version disponible sur GitHub :
 
-    wget https://github.com/<ton-user>/adam-tools/releases/latest/download/adam_tools_1.0_amd64.deb
-
-(Remplace <ton-user> par ton nom d’utilisateur GitHub.)
+    wget https://github.com/cTHE0/adam-tools/releases/latest/download/adam_tools_1.0_amd64.deb
 
 2. Installer le paquet
 
     sudo dpkg -i adam_tools_1.0_amd64.deb
 
-Si des erreurs de dépendances apparaissent, corrige-les avec :
+Si des erreurs de dépendances apparaissent, corrigez-les avec :
 
     sudo apt -f install
 
@@ -28,13 +34,13 @@ Si des erreurs de dépendances apparaissent, corrige-les avec :
 
 Après installation, la commande suivante devrait être disponible :
 
-    adam_tools --help
+    adam_tools
 
 
 🔧 Exemple d'utilisation
 -------------------------
 
-Afficher les n premiers octets d’un fichier en binaire :
+Afficher les 16 premiers octets d’un fichier en binaire :
 
     adam_tools binary mon_fichier.txt 16
 
@@ -51,7 +57,7 @@ Ce dossier est créé automatiquement si nécessaire.
 
 Si vous souhaitez compiler le projet manuellement :
 
-    git clone https://github.com/<ton-user>/adam-tools.git
+    git clone https://github.com/cTHE0/adam-tools.git
     cd adam-tools
     make
     ./adam_tools

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../include/leon_the_god.h"
+#include "../include/comp_datas.h"
 
 const char *holy_sayings = 
 	"Au commencement, Dieu créa le ciel et la terre. Genèse 1:1\n"
@@ -16,7 +17,7 @@ const char *holy_sayings =
 "Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux. Coran 1:1\n"
 "Louange à Allah, Seigneur de l'univers. Coran 1:2\n"
 "Le Très Miséricordieux, le Très Miséricordieux, le Maître du Jour de la rétribution. Coran 1:3-4\n"
-"C'est Toi [Seul] que nous adorons, et c'est Toi [Seul] dont nous implorons secours. Coran 1:5\n"
+"C'est Toi Dieu que nous adorons, et c'est Toi Dieu dont nous implorons secours. Coran 1:5\n"
 "Guide-nous dans le droit chemin, le chemin de ceux que Tu as comblés de faveurs. Coran 1:6-7\n"
 "Certes, Nous t'avons accordé une victoire éclatante. Coran 48:1\n"
 "Allah est le Protecteur de ceux qui ont la foi : Il les fait sortir des ténèbres à la lumière. Coran 2:257\n"
@@ -167,7 +168,8 @@ char* replace_all(const char* texte, const char* mot, const char* remplacement) 
 }
 
 void print_saying(char *name) {
-    char *original_line = get_line_from_text(holy_sayings, 18);
+    int i_line = get_exact_time() % 61;
+    char *original_line = get_line_from_text(holy_sayings, i_line);
     if (!original_line) {
         printf("Erreur : impossible de lire la ligne.\n");
         return;

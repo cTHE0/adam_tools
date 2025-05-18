@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int count_lines(const char *filename) {
+    FILE *f = fopen(filename, "r");
+    if (!f) return -1;
+
+    int lines = 0;
+    int c;
+    while ((c = fgetc(f)) != EOF) {
+        if (c == '\n') lines++;
+    }
+
+    fclose(f);
+    return lines;
+}
+
+char *get_line(const char *filename, int target_line) {
+    FILE *f = fopen(filename, "r");
+    if (!f || target_line < 0) return NULL;
+
+    char *line = NULL;
+    size_t len = 0;
+    int current_line = 0;
+    while (getline(&line, &len, f) != -1) {
+        if (current_line == target_line) {
+            fclose(f);
+            return line; // La ligne est allouée dynamiquement
+        }
+        current_line++;
+    }
+
+    // Ligne non trouvée
+    free(line);
+    fclose(f);
+    return NULL;
+}
+
+
+char* replace_first(const char* texte, const char* mot, const char* remplacement) {
+    const char *pos = strstr(texte, mot);
+    if (!pos) return NULL;  // mot non trouvé
+
+    size_t before_len = pos - texte;
+    size_t mot_len = strlen(mot);
+    size_t rep_len = strlen(remplacement);
+    size_t texte_len = strlen(texte);
+
+    // taille nouvelle chaîne = texte_len - mot_len + rep_len + 1 (terminateur)
+    char *result = malloc(texte_len - mot_len + rep_len + 1);
+    if (!result) return NULL;
+
+    // copier avant le mot
+    memcpy(result, texte, before_len);
+    // copier le remplacement
+    memcpy(result + before_len, remplacement, rep_len);
+    // copier la fin après le mot
+    memcpy(result + before_len + rep_len, pos + mot_len, texte_len - before_len - mot_len);
+    // terminer la chaîne
+    result[texte_len - mot_len + rep_len] = '\0';
+
+    return result;
+}
+
+char *get_saying(){
+	char *line = get_line("../texts/holy_sayings.txt", 12);
+	char *gods[] = ["Dieu", "Bouddha", "Allah"];
+	for (int i=0; i<3; i++){
+		
+char* replace_first(const char* texte, const char* mot, const char* remplacement) {
+    const char *pos = strstr(texte, mot);

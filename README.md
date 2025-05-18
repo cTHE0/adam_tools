@@ -1,4 +1,4 @@
-==========================================                                                                     
+                                                                  
 ADAM'S TOOLS
 ==========================================
 Adam Tools est une collection d’outils système personnalisés pour Linux, développée en C.

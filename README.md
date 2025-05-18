@@ -7,7 +7,6 @@
 /_/   \\_\\__,_|\\__,_|_| |_| |_| |___/   |_|\\___/ \\___/|_|___/ ／￣|　　 |　|　|
                                                                  (￣ヽ＿_ヽ_)__)
                                                                     ＼二)
-===========
 
 Adam Tools est une collection d’outils système personnalisés pour Linux, développée en C.
 

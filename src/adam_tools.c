@@ -8,6 +8,7 @@
 #include "../include/my_datas.h"
 #include "../include/discuss.h"
 #include "../include/cloud.h"
+#include "../include/sha256.h"
 #include <inttypes.h> // Nécessaire pour PRIu64
 
 void print_hello();
@@ -100,6 +101,19 @@ int main(int argc, char* argv[]) {
 		}
 		else {
 			printf("ERROR: Unknown command \"%s\"\n", argv[2]);
+		}
+	}
+	else if (strcmp(argv[1], "sha256") == 0){
+		if (argc < 3){
+			printf("You must put the name of the file you want to hash!\n");
+		}
+		else {
+			uint8_t hash[32];
+			sha256_file(argv[2], hash);
+			for (int i = 0; i < 32; i++){
+        			printf("%02x", hash[i]);
+			}
+			printf("\n");
 		}
 	}
 	 else {
